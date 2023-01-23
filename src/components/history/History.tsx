@@ -18,8 +18,9 @@ export const History: React.FC<HistoryTypes> = ({
 
   return (
     <HistoryWrapper>
-      {lastSearch.map((item) => (
+      {[...new Set(history)].map((item, index) => (
         <ButtonComponent
+          key={index}
           text={item}
           onClick={() => {
             setDataFetch([]);

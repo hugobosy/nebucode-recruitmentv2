@@ -6,4 +6,5 @@ export const Image = styled.img<Partial<ImageTypes>>`
   margin-bottom: 1rem;
   border-radius: 10px;
   width: 100%;
+  aspect-ratio: 1/1;
 `;
