@@ -1,0 +1,13 @@
+import styled from "styled-components";
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.4s ease-in-out;
+  &:focus {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+    outline: none;
+  }
+`;
