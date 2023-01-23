@@ -48,7 +48,6 @@ const typeBtns = {
 };
 
 export const Button = styled.button<Partial<ButtonTypes>>`
-  width: 200px;
   cursor: pointer;
   ${({ display }) => display && Displays[display]};
   ${({ typeBtn }) => typeBtn && typeBtns[typeBtn]};

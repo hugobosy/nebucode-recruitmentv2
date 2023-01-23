@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Input = styled.input`
   width: 100%;
-  padding: 15px 30px;
-  border-radius: 8px;
+  padding: ${({ theme }) => theme.size.twoUnits}
+    ${({ theme }) => theme.size.threeUnits};
+  border-radius: ${({ theme }) => theme.size.unit};
   border: none;
   transition: all 0.4s ease-in-out;
   &:focus {

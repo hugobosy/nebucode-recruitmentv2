@@ -14,7 +14,7 @@ export const ImageWrapper = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
     z-index: 99;
-    transition: all.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover button {
@@ -28,7 +28,7 @@ export const ImageWrapper = styled.div`
 export const Image = styled.img<Partial<ImageTypes>>`
   position: relative;
   ${({ display }) => display && Displays[display]};
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.size.unit};
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;

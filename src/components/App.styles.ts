@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
+  max-width: ${({ theme }) => theme.size.maxWidth};
   margin: 0 auto;
-  padding: 30px 0;
+  padding: ${({ theme }) => theme.size.threeUnits} 0;
 `;
