@@ -92,7 +92,9 @@ export const App = () => {
           text="Pobierz więcej"
           onClick={handleGetMoreData}
           position={"fixed"}
-          customCss={"bottom: 0; left: 50%; translate: -50% -50%;"}
+          customCss={
+            "bottom: 0; left: 50%; translate: -50% -50%; z-index: 9999"
+          }
           typeBtn={"danger"}
         />
       ) : null}
