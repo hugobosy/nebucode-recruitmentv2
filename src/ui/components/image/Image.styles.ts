@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ImageTypes } from "./Image.types";
 import { Displays } from "../../helpers/styles";
 export const Image = styled.img<Partial<ImageTypes>>`
   ${({ display }) => display && Displays[display]};
-  margin-bottom: 1rem;
   border-radius: 10px;
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 4/3;
+  object-fit: cover;
 `;

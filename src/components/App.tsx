@@ -31,7 +31,9 @@ export const App = () => {
   };
 
   const handleGetMoreData = () => {
+    setLoader(true);
     setPage((prevState) => prevState + 1);
+    setLoader(false);
   };
 
   useEffect(() => {
@@ -80,7 +82,11 @@ export const App = () => {
         <Images dataFetch={dataFetch} />
       )}
 
-      {error && <p style={{ color: "white" }}>Brak wyników do wyświetlenia</p>}
+      {error && (
+        <p style={{ color: "white", textAlign: "center" }}>
+          Brak wyników do wyświetlenia
+        </p>
+      )}
       {dataFetch.length ? (
         <ButtonComponent
           text="Pobierz więcej"
