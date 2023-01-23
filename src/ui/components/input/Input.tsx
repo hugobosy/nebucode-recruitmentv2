@@ -1,6 +1,7 @@
 import React, { ChangeEvent } from "react";
 import { Input } from "./Input.styles";
 import { InputTypes } from "./Input.types";
+import { handleChange } from "./Input.utils";
 
 export const InputComponent: React.FC<InputTypes> = ({
   type,
@@ -8,18 +9,13 @@ export const InputComponent: React.FC<InputTypes> = ({
   value,
   setValue,
   setDataFetch,
-}) => {
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setDataFetch([]);
-    setValue(e.target.value);
-  };
-
-  return (
-    <Input
-      type={type}
-      onChange={handleChange}
-      value={value}
-      placeholder={placeholder}
-    />
-  );
-};
+}) => (
+  <Input
+    type={type}
+    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+      handleChange(e, setDataFetch, setValue)
+    }
+    value={value}
+    placeholder={placeholder}
+  />
+);

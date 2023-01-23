@@ -18,25 +18,23 @@ export const ButtonComponent: React.FC<ButtonTypes> = ({
   typeBtn,
   position,
   customCss,
-}) => {
-  return (
-    <Button
-      display={display}
-      fontFamily={fontFamily}
-      fontColor={fontColor}
-      bgColor={bgColor}
-      border={border}
-      padding={padding}
-      radius={radius}
-      shadow={shadow}
-      transition={transition}
-      hover={hover}
-      onClick={onClick}
-      typeBtn={typeBtn}
-      position={position}
-      customCss={customCss}
-    >
-      {text}
-    </Button>
-  );
-};
+}) => (
+  <Button
+    display={display}
+    fontFamily={fontFamily}
+    fontColor={fontColor}
+    bgColor={bgColor}
+    border={border}
+    padding={padding}
+    radius={radius}
+    shadow={shadow}
+    transition={transition}
+    hover={hover}
+    onClick={onClick}
+    typeBtn={typeBtn}
+    position={position}
+    customCss={customCss}
+  >
+    {text}
+  </Button>
+);
