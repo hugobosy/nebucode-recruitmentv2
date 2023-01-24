@@ -22,6 +22,7 @@ export const getData = async (
         setError(false);
       }
       setDataFetch(dataFetch.concat(data.results));
+      console.log(data);
     });
   setLoader(false);
 };

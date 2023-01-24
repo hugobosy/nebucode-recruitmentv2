@@ -1,6 +1,6 @@
 export interface Data {
-  links: {
-    download: string;
+  urls: {
+    small: string;
   };
 
   description: string;

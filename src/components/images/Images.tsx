@@ -6,11 +6,7 @@ import { ImageComponent } from "../../ui/components/image/Image";
 export const Images: React.FC<ImagesTypes> = ({ dataFetch }) => (
   <ImagesWrapper>
     {dataFetch.map((img, index) => (
-      <ImageComponent
-        key={index}
-        src={img.links.download}
-        alt={img.description}
-      />
+      <ImageComponent key={index} src={img.urls.small} alt={img.description} />
     ))}
   </ImagesWrapper>
 );
