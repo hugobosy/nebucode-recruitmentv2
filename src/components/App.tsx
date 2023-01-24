@@ -31,9 +31,11 @@ export const App = () => {
   };
 
   const handleGetMoreData = () => {
-    setLoader(true);
     setPage((prevState) => prevState + 1);
-    setLoader(false);
+    window.scrollTo({
+      top: document.documentElement.offsetHeight,
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
