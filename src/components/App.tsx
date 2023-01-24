@@ -49,15 +49,19 @@ export const App = () => {
   }, [debouncedValue]);
 
   useEffect(() => {
-    getData(
-      clientId,
-      value,
-      page,
-      setDataFetch,
-      dataFetch,
-      setLoader,
-      setError
-    );
+    try {
+      getData(
+        clientId,
+        value,
+        page,
+        setDataFetch,
+        dataFetch,
+        setLoader,
+        setError
+      );
+    } catch (e) {
+      console.log(e);
+    }
   }, [debouncedValue, page]);
 
   return (
