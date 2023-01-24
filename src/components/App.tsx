@@ -32,10 +32,12 @@ export const App = () => {
 
   const handleGetMoreData = () => {
     setPage((prevState) => prevState + 1);
-    window.scrollTo({
-      top: document.documentElement.offsetHeight,
-      behavior: "smooth",
-    });
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.documentElement.offsetHeight,
+        behavior: "smooth",
+      });
+    }, 500);
   };
 
   useEffect(() => {
