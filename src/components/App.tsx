@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { InputComponent } from "../ui/components/input/Input";
+import { useDebounce, useLocalStorage } from "usehooks-ts";
 import { Container } from "./App.styles";
 import { Data } from "../types/data";
 import { getData } from "../utils/getData";
-import { useDebounce, useLocalStorage } from "usehooks-ts";
 import { Images } from "./images/Images";
 import { History } from "./history/History";
 import { ButtonComponent } from "../ui/components/button/Button";
 import { Loader } from "../ui/components/loader/Loader";
-import { useSearchParams } from "react-router-dom";
 
 export const App = () => {
   const [value, setValue] = useState<string>("");

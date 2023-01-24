@@ -23,7 +23,6 @@ export const getData = async (
           setError(false);
         }
         setDataFetch(dataFetch.concat(data.results));
-        console.log(data.results);
       });
   } catch (e) {
     throw new Error("Error");
