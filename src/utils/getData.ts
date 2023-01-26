@@ -8,7 +8,9 @@ export const getData = async (
   setDataFetch: Dispatch<SetStateAction<Data[]>>,
   dataFetch: Data[],
   setLoader: Dispatch<SetStateAction<boolean>>,
-  setError: Dispatch<SetStateAction<boolean>>
+  setError: Dispatch<SetStateAction<boolean>>,
+  setDataFetchCache: Dispatch<SetStateAction<Data[]>>,
+  dataFetchCache: Data[],
 ) => {
   setLoader(true);
   await fetch(
@@ -22,6 +24,7 @@ export const getData = async (
         setError(false);
       }
       setDataFetch(dataFetch.concat(data.results));
+      setDataFetchCache(dataFetchCache.concat(data.results.map((img: Data) => img.urls.small)))
     });
   setLoader(false);
 };

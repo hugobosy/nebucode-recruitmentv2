@@ -14,7 +14,8 @@ import useCache from "../hooks/useCache";
 export const App = () => {
   const [value, setValue] = useState<string>("");
   const [page, setPage] = useState<number>(1);
-  const [dataFetch, setDataFetch] = useCache<Data[]>('myData',[]);
+  const [dataFetchCache, setDataFetchCache] = useCache<Data[]>("myCache", []);
+  const [dataFetch, setDataFetch] = useState<Data[]>([]);
   const [loader, setLoader] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
@@ -62,7 +63,9 @@ export const App = () => {
         setDataFetch,
         dataFetch,
         setLoader,
-        setError
+        setError,
+        setDataFetchCache,
+        dataFetchCache
       );
     } catch (e) {
       console.log(e);
