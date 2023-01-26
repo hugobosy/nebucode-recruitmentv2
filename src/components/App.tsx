@@ -9,11 +9,12 @@ import { Images } from "./images/Images";
 import { History } from "./history/History";
 import { ButtonComponent } from "../ui/components/button/Button";
 import { Loader } from "../ui/components/loader/Loader";
+import useCache from "../hooks/useCache";
 
 export const App = () => {
   const [value, setValue] = useState<string>("");
   const [page, setPage] = useState<number>(1);
-  const [dataFetch, setDataFetch] = useState<Data[]>([]);
+  const [dataFetch, setDataFetch] = useCache<Data[]>('myData',[]);
   const [loader, setLoader] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
