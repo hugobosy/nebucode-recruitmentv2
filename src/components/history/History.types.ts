@@ -5,4 +5,5 @@ export interface HistoryTypes {
   history: string[];
   setValue: Dispatch<SetStateAction<string>>;
   setDataFetch: Dispatch<SetStateAction<Data[]>>;
+  setPage: Dispatch<SetStateAction<number>>;
 }

@@ -86,6 +86,7 @@ export const App = () => {
         history={history}
         setValue={setValue}
         setDataFetch={setDataFetch}
+        setPage={setPage}
       />
 
       {loader && dataFetch.length === 0 ? (

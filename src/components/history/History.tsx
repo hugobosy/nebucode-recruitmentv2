@@ -8,6 +8,7 @@ export const History: React.FC<HistoryTypes> = ({
   history,
   setValue,
   setDataFetch,
+  setPage,
 }) => (
   <HistoryWrapper>
     {[...new Set(history)].map((item, index) => (
@@ -17,6 +18,7 @@ export const History: React.FC<HistoryTypes> = ({
         onClick={() => {
           setDataFetch([]);
           handleClick(item, setValue);
+          setPage(1);
         }}
         customCss={"width: auto"}
         padding={"2px 5px"}
