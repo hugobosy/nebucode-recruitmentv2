@@ -9,12 +9,14 @@ export const InputComponent: React.FC<InputTypes> = ({
   value,
   setValue,
   setDataFetch,
+  setPage,
 }) => (
   <Input
     type={type}
-    onChange={(e: ChangeEvent<HTMLInputElement>) =>
-      handleChange(e, setDataFetch, setValue)
-    }
+    onChange={(e: ChangeEvent<HTMLInputElement>) => {
+      handleChange(e, setDataFetch, setValue);
+      setPage(1);
+    }}
     value={value}
     placeholder={placeholder}
   />

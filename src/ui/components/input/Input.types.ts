@@ -8,4 +8,5 @@ export interface InputTypes {
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
   setDataFetch: Dispatch<SetStateAction<Data[]>>;
+  setPage: Dispatch<SetStateAction<number>>;
 }

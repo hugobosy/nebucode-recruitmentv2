@@ -80,6 +80,7 @@ export const App = () => {
         value={value}
         setValue={setValue}
         setDataFetch={setDataFetch}
+        setPage={setPage}
       />
 
       <History
